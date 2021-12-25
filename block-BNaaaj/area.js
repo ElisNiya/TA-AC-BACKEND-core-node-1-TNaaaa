@@ -7,5 +7,5 @@ function circle (r) {
 }
 model.exports = {
 square: square,
-  circle : circle
+circle : circle
 }
