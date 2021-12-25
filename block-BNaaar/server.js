@@ -10,10 +10,16 @@ server.listen(5000)
 
 function handleRequest(req,res){
   if(req.method === 'GET' && req.url === '/'){
+    res.setHeader('content-type', 'text/plain')
     res.write('Welcome to homepage')
+    res.end()
   } else if(req.method === 'GET' && req.url === '/about'){
+    res.setHeader('content-type', 'text/plain')
     res.write('this is all about NodeJS')
+    res.end()
   } else if(req.method === 'POST' && req.url === '/about'){
-    res.write('message:this is a post request').json()
+    res.setHeader('content-type', 'application/json')
+    res.write('message:this is a post request')
+    res.end()
   }
 }
